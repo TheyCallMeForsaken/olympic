@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: #111;
+	animation: fadeInAnimation ease 2s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo
+{
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+header .logo.mobile
+{
+  font-size: 4em;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.toggle
+{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+.toggle.active
+{
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}
+.showcase
+{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+.showcase.active
+{
+  right: 300px;
+}
+
+.showcase video
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2279a1;
+  mix-blend-mode: overlay;
+}
+.arrow-circle-o-down:before{content:"\f01a"}
+.text
+{
+  position: relative;
+  z-index: 10;
+  margin-right: 20px;
+}
+
+.text h2
+{
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h2.mobile
+{
+  font-size: 7em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h4
+{
+  font-size: 3em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h4.mobile
+{
+  font-size: 4em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text p
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.text p.mobile
+{
+  font-size: 2.5em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.text2
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.text2.mobile
+{
+  font-size: 2.5em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.button
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.button.mobile
+{
+  display: inline-block;
+  font-size: 2.1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.button:hover{
+  letter-spacing: 6px;
+}
+.button2
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.button2.mobile
+{
+  display: inline-block;
+  font-size: 2.1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.button2:hover{
+  letter-spacing: 6px;
+}
+.button3
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.button3.mobile
+{
+  display: inline-block;
+  font-size: 2.1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.button3:hover{
+  letter-spacing: 6px;
+}
+.button4
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.button4.mobile
+{
+  display: inline-block;
+  font-size: 2.1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.button4:hover{
+  letter-spacing: 6px;
+}
+.button5
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.button5.mobile
+{
+  display: inline-block;
+  font-size: 2.1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.button5:hover{
+  letter-spacing: 6px;
+}
+.button6
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.button6.mobile
+{
+  display: inline-block;
+  font-size: 2.1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.button6:hover{
+  letter-spacing: 6px;
+}
+.button7
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.button7.mobile
+{
+  display: inline-block;
+  font-size: 2.1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.button7:hover{
+  letter-spacing: 6px;
+}
+.button8
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.button8.mobile
+{
+  display: inline-block;
+  font-size: 2.1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.button8:hover{
+  letter-spacing: 6px;
+}
+.text a
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a.mobile
+{
+  display: inline-block;
+  font-size: 2.1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover
+{
+  letter-spacing: 6px;
+}
+.social
+{
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social li
+{
+  list-style: none;
+}
+.social li a
+{
+  display: inline-block;
+  margin-right: 10px;
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.social li a:hover
+{
+  transform: scale(0.5) translateY(-15px);
+}
+.menu
+{
+  background-image: url('navbarbg.jpg');
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu.mobile
+{
+  background-image: url('navbg.webp');
+  background-repeat: repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul
+{
+  position: relative;
+}
+.menu ul li
+{
+  list-style: none;
+}
+.menu ul li a
+{
+  text-decoration: none;
+  font-size: 2rem;
+  color: #111;
+}
+.menu ul li a.mobile
+{
+  text-decoration: none;
+  font-size: 2.4em;
+  color: rgb(255, 255, 255);
+}
+.menu ul li a:hover, .menu-active
+{
+  color: #ffffff; 
+}
+
+@media (max-width: 991px)
+{
+  .showcase,
+  .showcase header
+  {
+    padding: 40px;
+  }
+  .text h2
+  {
+    font-size: 3em;
+  }
+  .text h3
+  {
+    font-size: 2em;
+  }
+}
+.menu .dropdown ul {
+  display: block;
+  position: absolute;
+  top: calc(100% + 30px);
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(76, 82, 95, 0.25);
+  transition: 0.3s;
+}
+.menu .dropdown ul li {
+  min-width: 100px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.menu .dropdown ul a {
+  padding: 10px 20px 20px;
+  font-size: 20px;
+  text-transform: none;
+  color: #1c3745;
+}
+.menu .dropdown ul a:hover, .menu .dropdown ul .active:hover, .menu .dropdown ul li:hover > a {
+  color: #03a9f4;
+}
+.menu .dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+form{
+  width: 500px;
+  max-width: 600px;
+}
+form.mobile{
+  width:800px;
+  max-width: 800px;
+  margin-top:20px;
+}
+.input-group{
+  margin-bottom: 10px;
+  position: relative;
+}
+.input-group2{
+  margin-bottom: 10px;
+  position: relative;
+}
+.input-group3{
+  margin-bottom: 10px;
+  position: relative;
+}
+.input-group2 input.mobile{
+  border:  2px solid #fff;
+  font-size: 30px;
+}
+.input-group2 label.mobile{
+  font-size: 30px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right:0;
+  padding: 10px;
+  color: #fff;
+  cursor: text;
+}
+.input-group2.mobile{
+  margin-bottom: 20px;
+  position: relative;
+}
+.input-group3 label.mobile{
+  font-size: 30px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right:0;
+  padding: 10px;
+  color: #fff;
+  cursor: text;
+}
+.input-group3.mobile{
+  margin-bottom: 20px;
+  position: relative;
+}
+.input-group.mobile{
+  margin-bottom: 20px;
+  position: relative;
+}
+input, textarea{
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border:  1px solid #fff;
+  color:  #fff;
+  background: transparent;
+  font-size: 15px;
+}
+input.mobile, textarea.mobile{
+  border:  2px solid #fff;
+  font-size: 30px;
+}
+label{
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right:0;
+  padding: 10px;
+  color: #fff;
+  cursor: text;
+}
+label.mobile{
+  font-size: 30px;
+}
+button{
+  padding: 10px 0;
+  color: #fff;
+  outline: none;
+  background: transparent;
+  border: 1px solid #fff;
+  width: 100%;
+  cursor: pointer;
+}
+button.mobile{
+  border: 2px solid #fff;
+  font-size:30px;
+}
+button:hover{
+  background-color: #fff;
+  transition: 0.5s;
+  color: black;
+  letter-spacing: 4px;
+}
+input:focus~label,input:valid~label,textarea:focus~label,textarea:valid~label{
+  transition: 0.3s;
+  opacity: 0;
+}
